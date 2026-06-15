@@ -1,7 +1,5 @@
 # Mitya's Skills
 
-[![skills.sh](https://skills.sh/b/Xallt/mitya-skills)](https://skills.sh/Xallt/mitya-skills)
-
 The basic idea: engineer better context and behavior for LLMs with small,
 composable skills. They are the skills I was willing to keep after reading, modifying, and
 removing some.
