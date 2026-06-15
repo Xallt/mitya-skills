@@ -72,9 +72,6 @@ better existing skills.
   tasks.
 - **[`test-driven-development`](./skills/test-driven-development/SKILL.md)** -
   Use a red-green-refactor loop when implementing features or bug fixes.
-- **[`diagnose`](./skills/diagnose/SKILL.md)** - Debug hard bugs and performance
-  regressions with a reproduce, minimise, hypothesise, instrument, fix, and
-  regression-test loop.
 - **[`code-simplification`](./skills/code-simplification/SKILL.md)** - Simplify
   working code that has become harder to read, maintain, or extend.
 - **[`improve-codebase-architecture`](./skills/improve-codebase-architecture/SKILL.md)** -
