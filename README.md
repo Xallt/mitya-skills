@@ -1,4 +1,4 @@
-# Mitya's Agent Skills
+# Mitya's Skills
 
 [![skills.sh](https://skills.sh/b/Xallt/mitya-skills)](https://skills.sh/Xallt/mitya-skills)
 
