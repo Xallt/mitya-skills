@@ -104,10 +104,3 @@ better existing skills.
   Write or improve READMEs for the right audience and project type.
 - **[`find-skills`](./skills/find-skills/SKILL.md)** - Discover existing skills
   before writing a new one.
-
-## Notes
-
-This repository is a snapshot of my global skills. It is public so I can back it
-up, install it elsewhere, and share the parts that might be useful.
-
-Suggestions and criticism are welcome.
