@@ -55,49 +55,65 @@ better existing skills.
 
 ## Reference
 
+Origin notes point to the upstream skill where I could verify one. "Personal"
+means I do not know of a direct upstream; it is my own workflow glue or a
+repo-specific adaptation.
+
 ### Planning And Alignment
 
 - **[`grill-me`](./skills/grill-me/SKILL.md)** - Interview the user relentlessly
-  about a plan or design until the important decisions are resolved.
+  about a plan or design until the important decisions are resolved. Adapted from
+  [`mattpocock/skills`](https://github.com/mattpocock/skills/blob/main/skills/productivity/grill-me/SKILL.md).
 - **[`plan-required-skills`](./skills/plan-required-skills/SKILL.md)** - Keep
   implementation plans honest about TDD, incremental work, subagents, reviews,
-  and named execution practices.
+  and named execution practices. Personal.
 
 ### Building And Debugging
 
 - **[`incremental-implementation`](./skills/incremental-implementation/SKILL.md)** -
-  Deliver multi-file changes in small, verified slices.
+  Deliver multi-file changes in small, verified slices. Adapted from
+  [`addyosmani/agent-skills`](https://github.com/addyosmani/agent-skills/blob/main/skills/incremental-implementation/SKILL.md).
 - **[`subagent-driven-development`](./skills/subagent-driven-development/SKILL.md)** -
   Execute implementation plans by dispatching isolated subagents for independent
-  tasks.
+  tasks. Adapted from
+  [`obra/superpowers`](https://github.com/obra/superpowers/blob/main/skills/subagent-driven-development/SKILL.md).
 - **[`test-driven-development`](./skills/test-driven-development/SKILL.md)** -
-  Use a red-green-refactor loop when implementing features or bug fixes.
+  Use a red-green-refactor loop when implementing features or bug fixes. Adapted
+  from
+  [`obra/superpowers`](https://github.com/obra/superpowers/blob/main/skills/test-driven-development/SKILL.md).
 - **[`code-simplification`](./skills/code-simplification/SKILL.md)** - Simplify
-  working code that has become harder to read, maintain, or extend.
+  working code that has become harder to read, maintain, or extend. Adapted from
+  [`addyosmani/agent-skills`](https://github.com/addyosmani/agent-skills/blob/main/skills/code-simplification/SKILL.md).
 - **[`improve-codebase-architecture`](./skills/improve-codebase-architecture/SKILL.md)** -
-  Find deeper refactoring opportunities in a codebase.
+  Find deeper refactoring opportunities in a codebase. Adapted from
+  [`mattpocock/skills`](https://github.com/mattpocock/skills/blob/main/skills/engineering/improve-codebase-architecture/SKILL.md).
 
 ### Review And Shipping
 
 - **[`review`](./skills/review/SKILL.md)** - Review branch or work-in-progress
-  changes against standards and spec.
+  changes against standards and spec. Adapted from
+  [`mattpocock/skills`](https://github.com/mattpocock/skills/blob/main/skills/in-progress/review/SKILL.md).
 - **[`finalize-feature`](./skills/finalize-feature/SKILL.md)** - Prepare a
   branch for review: triage existing PR feedback, run checks, commit, push, and
-  open or update a PR.
+  open or update a PR. Personal.
 - **[`pr`](./skills/pr/SKILL.md)** - Create or reconcile a branch, PR, and
-  Linear issue so they describe the full branch scope.
+  Linear issue so they describe the full branch scope. Personal.
 - **[`sep-worktree`](./skills/sep-worktree/SKILL.md)** - Isolate work in a
-  separate git worktree and clean it up when the task is done.
+  separate git worktree and clean it up when the task is done. Personal.
 - **[`skill-review`](./skills/skill-review/SKILL.md)** - Retrospect on which
-  skills helped or got in the way during a session.
+  skills helped or got in the way during a session. Personal.
 - **[`handoff`](./skills/handoff/SKILL.md)** - Compact the current conversation
-  into a handoff document for another agent.
+  into a handoff document for another agent. Adapted from
+  [`mattpocock/skills`](https://github.com/mattpocock/skills/blob/main/skills/productivity/handoff/SKILL.md).
 
 ### Skill And README Authoring
 
 - **[`writing-skills`](./skills/writing-skills/SKILL.md)** - Create, edit, and
-  verify agent skills.
+  verify agent skills. Adapted from
+  [`obra/superpowers`](https://github.com/obra/superpowers/blob/main/skills/writing-skills/SKILL.md).
 - **[`crafting-effective-readmes`](./skills/crafting-effective-readmes/SKILL.md)** -
-  Write or improve READMEs for the right audience and project type.
+  Write or improve READMEs for the right audience and project type. Adapted from
+  [`softaworks/agent-toolkit`](https://github.com/softaworks/agent-toolkit/blob/main/skills/crafting-effective-readmes/SKILL.md).
 - **[`find-skills`](./skills/find-skills/SKILL.md)** - Discover existing skills
-  before writing a new one.
+  before writing a new one. Adapted from
+  [`vercel-labs/skills`](https://github.com/vercel-labs/skills/blob/main/skills/find-skills/SKILL.md).
