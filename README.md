@@ -2,12 +2,9 @@
 
 [![skills.sh](https://skills.sh/b/Xallt/mitya-skills)](https://skills.sh/Xallt/mitya-skills)
 
-Personal agent skills I use to make coding agents less random and more useful.
-
 The basic idea: engineer better context and behavior for LLMs with small,
-composable skills. These are not meant to be a universal workflow framework.
-They are the skills I was willing to keep after reading, trying, modifying, and
-removing a bunch of others.
+composable skills. They are the skills I was willing to keep after reading, modifying, and
+removing some.
 
 ## Quickstart
 
@@ -27,14 +24,9 @@ npx skills@latest add Xallt/mitya-skills --skill grill-me --agent cursor
 
 ## Read Before Installing
 
-Please read the skills before adding them.
+Please read skills before deciding to add!
 
-Some of these are general engineering workflows. Some are very opinionated. A
-few include personal or repo-specific habits, especially around PRs, Linear, and
-worktrees. They are useful to me because they encode how I actually work, not
-because they are perfectly generic.
-
-If a skill is almost right, copy it and edit it. That is the point.
+Some of these are opinionated (especially around PRs / Linear / worktrees), some have repo specifics. 
 
 ## Why This Exists
 
@@ -44,8 +36,7 @@ skills that shape the agent's behavior at the moment they are needed.
 
 The pattern I use now:
 
-- For ambiguous plans, use [`grill-me`](./skills/grill-me/SKILL.md) to force
-  the missing decisions into the open.
+- [`grill-me`](./skills/grill-me/SKILL.md) for narrowing down a feature
 - For medium to large features, use
   [`incremental-implementation`](./skills/incremental-implementation/SKILL.md),
   [`subagent-driven-development`](./skills/subagent-driven-development/SKILL.md),
@@ -53,16 +44,14 @@ The pattern I use now:
   [`test-driven-development`](./skills/test-driven-development/SKILL.md).
 - When code starts getting bloated, use
   [`code-simplification`](./skills/code-simplification/SKILL.md).
-- When a branch is ready, use
-  [`finalize-feature`](./skills/finalize-feature/SKILL.md) and
-  [`pr`](./skills/pr/SKILL.md) to push it through checks, PR creation, and issue
-  linking.
+- [`pr`](./skills/pr/SKILL.md) for my instructions on creating a PR & linking to a linear issue
+- [`finalize-feature`](./skills/finalize-feature/SKILL.md) any time code in the branch is ready for pushing & needs refinement (run checks / create PR if lacking, check PR comments)
 - After a session, use
   [`skill-review`](./skills/skill-review/SKILL.md) to ask what should change in
   the invoked skills so the agent stumbles less next time.
 
-I also use [`find-skills`](./skills/find-skills/SKILL.md) when looking for
-better existing skills instead of writing everything myself.
+[`find-skills`](./skills/find-skills/SKILL.md) when looking for
+better existing skills.
 
 ## Reference
 
