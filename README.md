@@ -44,7 +44,7 @@ The pattern I use now:
   [`test-driven-development`](./skills/test-driven-development/SKILL.md).
 - When code starts getting bloated, use
   [`code-simplification`](./skills/code-simplification/SKILL.md).
-- [`pr`](./skills/pr/SKILL.md) for my instructions on creating a PR & linking to a linear issue
+- [`pr`](./skills/pr/SKILL.md) for my instructions on creating a PR & linking to a Linear issue
 - [`finalize-feature`](./skills/finalize-feature/SKILL.md) any time code in the branch is ready for pushing & needs refinement (run checks / create PR if lacking, check PR comments)
 - After a session, use
   [`skill-review`](./skills/skill-review/SKILL.md) to ask what should change in
