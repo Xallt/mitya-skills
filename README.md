@@ -26,11 +26,7 @@ Please read skills before deciding to add!
 
 Some of these are opinionated (especially around PRs / Linear / worktrees), some have repo specifics. 
 
-## Why This Exists
-
-I've been spending a lot of time improving my LLM setup. The thing that helped
-most was not a bigger process or a single mega-prompt. It was having small
-skills that shape the agent's behavior at the moment they are needed.
+# My approach
 
 The pattern I use now:
 
