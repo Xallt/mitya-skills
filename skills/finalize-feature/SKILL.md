@@ -9,7 +9,7 @@ disable-model-invocation: true
 
 # Finalize Feature
 
-Prepare a branch for review: **triage (existing PR) → checks → commit → push → PR (+Linear)**. Invoking this means the full workflow through a pushed branch — not checks alone. **Always push when done** (see Push below).
+Prepare a branch for review: **triage (existing PR) → checks → commit → push → PR (+Linear) → preview (medida-web)**. Invoking this means the full workflow through a pushed branch — not checks alone. **Always push when done** (see Push below).
 
 ## Workflow
 
@@ -36,7 +36,9 @@ Prepare a branch for review: **triage (existing PR) → checks → commit → pu
    - **New PR** — create per `pr` skill.
    - **Existing PR** — fix title/Linear link if wrong. **Update PR body only when branch scope changed** (new commits, files, or behavior vs the PR base — compare `git diff <base>...HEAD` to what the description already covers). Do not rewrite an accurate description for lint-only or review-fix follow-ups.
 
-7. **Final response — Linear first** — include the Linear issue number for every finalized PR, linked to its Linear review page so the user can review the diff there. Get the review URL from the PR's Linear bot comment (`linear-review-link`); if unavailable, link to the Linear issue page. Use the issue number in the link label, e.g. `[ENG-1234 — review in Linear](<verified Linear review URL>)`. The Linear link can be the only review link; never return only a GitHub PR link. This also applies when called through `finalize-in-sep-worktree`.
+7. **Preview (medida-web only)** — babysit the PR until the `deploy-preview` check for the pushed head finishes (`gh pr checks <num>`); wait in the background or via the harness's PR watch, not a tight polling loop. On pass, take the URL from the github-actions comment marked `<!-- preview-url -->` (`[Web preview](https://…vercel.app)`). On failure, read the job log, report the failure and log link; don't loop on fixes. Applies to follow-up pushes too.
+
+8. **Final response — Linear first** — include the Linear issue number for every finalized PR, linked to its Linear review page so the user can review the diff there. Get the review URL from the PR's Linear bot comment (`linear-review-link`); if unavailable, link to the Linear issue page. Use the issue number in the link label, e.g. `[ENG-1234 — review in Linear](<verified Linear review URL>)`. The Linear link can be the only review link; never return only a GitHub PR link. For medida-web, also include the preview URL from step 7 (or the deploy failure). This also applies when called through `finalize-in-sep-worktree`.
 
 ## Medida
 
@@ -68,4 +70,4 @@ Prepare a branch for review: **triage (existing PR) → checks → commit → pu
 
 **Multi-repo order** — open PRs in dependency order: 1) medida-3d (migration/schema/API), 2) medida-web (frontend/orpc), 3) medida-ui (iOS). Only repos that changed; stack bases when one PR depends on another. Each PR gets its own Linear sub-issue (see pr).
 
-**Don't stop at green checks** — finalize ends with a pushed branch and a PR (draft by default), not a passing lint run.
+**Don't stop at green checks** — finalize ends with a pushed branch and a PR (draft by default) — plus a live preview for medida-web — not a passing lint run.
