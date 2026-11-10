@@ -101,6 +101,12 @@ repo-specific adaptation.
 - **[`design-mockups`](./skills/design-mockups/SKILL.md)** - Iterate rounds of
   lettered mockups, rendered in the real app, until Mitya picks one. Personal.
 
+### Data
+
+- **[`active-labeling`](./skills/active-labeling/SKILL.md)** - Live labeling
+  loop: the agent watches labels land, picks the next most informative samples,
+  and talks back on the page. Personal.
+
 ### Skill And README Authoring
 
 - **[`writing-skills`](./skills/writing-skills/SKILL.md)** - Create, edit, and
