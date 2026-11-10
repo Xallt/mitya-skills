@@ -29,5 +29,24 @@ enterprise layering. Apply these defaults unless a project says otherwise.
 - Favor discoverability: explicit interfaces, local conventions, clear checklists.
 - Match the surrounding code's idiom.
 
+## Keep comments concise
+- Use the fewest words needed to explain information the code does not express:
+  intent, constraints, tradeoffs, or non-obvious reasons.
+- Do not restate what the code does. Omit comments that add no information.
+
+## Commit messages — Scoped Commits (https://scopedcommits.com)
+- Subject: `<scope>: <description>`, e.g. `auth: reject expired refresh tokens`.
+  Scope = the subsystem/module touched; match scopes already used in `git log`.
+- Multiple areas: use a broader scope, `a, b:`, or `treewide:`.
+- Ticket ids go after the scope (`auth (ENG-123): ...`) or in a trailer.
+- Optional body explains why; optional trailers last. Not Conventional Commits (`feat:`/`fix:`).
+- Reverts and merges keep Git's default format.
+
 Lean on these when unsure: Rust (ownership/safety, errors-as-values),
 OCaml (domain modules, exhaustive matching), Effect-style TS (typed effects/errors).
+
+## Visual artwork
+- Add AI-generated images or SVG artwork only when I explicitly request it.
+  This includes SVG markup hand-written by an agent. A general request to design
+  or improve a UI does not authorize generating artwork. Prefer existing assets,
+  emoji, or ordinary text/CSS fallbacks unless I ask for custom artwork.

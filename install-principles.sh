@@ -5,8 +5,9 @@
 #   ./install-principles.sh [harness ...]    # default: all
 #   ./install-principles.sh claude codex     # only these
 #
-# File-based harnesses get an idempotent, marker-delimited block (re-running
-# replaces it in place — never duplicates, never clobbers other content).
+# Claude gets an idempotent, marker-delimited @import block (re-running
+# replaces it in place — never duplicates, never clobbers other content);
+# Codex gets a symlink (it has no import syntax).
 # Harnesses with no file-based global rules (Cursor) get copied to the
 # clipboard with paste instructions.
 #
@@ -61,9 +62,11 @@ install_claude() {
 }
 
 install_codex() {
-  # Codex has no import syntax — embed a content snapshot. Re-run after editing.
-  inject_block "$CODEX_AGENTS" "$(cat "$PRINCIPLES_FILE")"
-  echo "  codex   ->  $CODEX_AGENTS  (snapshot — re-run after edits)"
+  # Codex has no import syntax — symlink so edits are picked up live.
+  # Replaces the whole file: Codex-only global rules would need a snapshot instead.
+  mkdir -p "$(dirname "$CODEX_AGENTS")"
+  ln -sfn "$PRINCIPLES_FILE" "$CODEX_AGENTS"
+  echo "  codex   ->  $CODEX_AGENTS  (live symlink)"
 }
 
 install_cursor() {
