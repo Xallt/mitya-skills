@@ -38,9 +38,6 @@ The pattern I use now:
   [`test-driven-development`](./skills/test-driven-development/SKILL.md).
 - [`pr`](./skills/pr/SKILL.md) for my instructions on creating a PR & linking to a Linear issue
 - [`finalize-feature`](./skills/finalize-feature/SKILL.md) any time code in the branch is ready for pushing & needs refinement (run checks / create PR if lacking, check PR comments)
-- After a session, use
-  [`skill-review`](./skills/skill-review/SKILL.md) to ask what should change in
-  the invoked skills so the agent stumbles less next time.
 
 [`find-skills`](./skills/find-skills/SKILL.md) when looking for
 better existing skills.
@@ -89,11 +86,20 @@ repo-specific adaptation.
   chain under a parent Linear issue. Personal.
 - **[`sep-worktree`](./skills/sep-worktree/SKILL.md)** - Isolate work in a
   separate git worktree and clean it up when the task is done. Personal.
-- **[`skill-review`](./skills/skill-review/SKILL.md)** - Retrospect on which
-  skills helped or got in the way during a session. Personal.
 - **[`handoff`](./skills/handoff/SKILL.md)** - Compact the current conversation
   into a handoff document for another agent. Adapted from
   [`mattpocock/skills`](https://github.com/mattpocock/skills/blob/main/skills/productivity/handoff/SKILL.md).
+
+### Presentations
+
+- **[`visual-presentations`](./skills/visual-presentations/SKILL.md)** - Create and
+  edit Mitya’s visual presentations, with a Reveal.js starter and offline delivery
+  checks. Personal.
+
+### Design
+
+- **[`design-mockups`](./skills/design-mockups/SKILL.md)** - Iterate rounds of
+  lettered mockups, rendered in the real app, until Mitya picks one. Personal.
 
 ### Skill And README Authoring
 

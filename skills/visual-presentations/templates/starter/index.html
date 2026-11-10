@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Presentation</title>
+  <link rel="stylesheet" href="vendor/reveal.css">
+  <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+  <main class="reveal" aria-label="Presentation">
+    <div class="slides">
+      <section data-title="Opening">
+        <h1 data-placeholder>Presentation title</h1>
+        <div class="visual-placeholder" data-placeholder>Add the opening visual</div>
+        <aside class="notes">Replace with the opening message and any source information</aside>
+      </section>
+      <section data-title="Evidence">
+        <h2 data-placeholder>The point to make</h2>
+        <div class="evidence-layout">
+          <figure class="visual-placeholder" data-placeholder>Add a screenshot, chart, or HTML view</figure>
+          <div class="evidence-copy">
+            <div class="metric" data-placeholder>—</div>
+            <div class="caption" data-one-line data-placeholder>What the evidence shows</div>
+          </div>
+        </div>
+        <aside class="notes">Replace with the source, definition, time window, and explanation</aside>
+      </section>
+    </div>
+  </main>
+  <dialog id="speaker-notes" aria-label="Speaker notes">
+    <button type="button" id="close-notes" aria-label="Close notes">×</button>
+    <h3 id="notes-title"></h3><div id="notes-content"></div>
+  </dialog>
+  <script src="vendor/reveal.js"></script>
+  <script src="deck.js"></script>
+</body>
+</html>

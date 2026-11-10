@@ -1,0 +1,40 @@
+:root {
+  --deck-bg: #0b1520;
+  --deck-text: #f3f7fa;
+  --deck-muted: #9babb9;
+  --deck-cyan: #38bdf8;
+  --deck-green: #50d99a;
+  --deck-amber: #f5b85c;
+  --deck-red: #ff667d;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { background: var(--deck-bg); color: var(--deck-text); overflow: hidden; }
+.reveal {
+  position: fixed; inset: 0; width: 100%; height: 100%; overflow: hidden;
+  font: 32px/1.2 Arial, Helvetica, sans-serif; color: var(--deck-text);
+}
+.reveal .slide-background-content { background: var(--deck-bg); }
+.reveal .slides { text-align: left; }
+.reveal .slides section { width: 1600px; height: 900px; padding: 60px 80px; overflow: hidden; }
+.reveal h1, .reveal h2 { margin: 0; text-transform: none; letter-spacing: -2px; line-height: 1.07; font-weight: 700; }
+.reveal h1 { font-size: 80px; }
+.reveal h2 { font-size: 64px; }
+.reveal p, .reveal figure { margin: 0; }
+.reveal img { display: block; margin: 0; border: 0; max-width: 100%; max-height: 100%; object-fit: contain; }
+.evidence-layout { display: grid; grid-template-columns: 60% 1fr; gap: 70px; align-items: center; height: 635px; margin-top: 50px; }
+.evidence-copy { display: grid; gap: 20px; }
+.metric { font-size: 150px; line-height: 1; font-weight: 700; letter-spacing: -7px; color: var(--deck-cyan); }
+.caption { font-size: 34px; line-height: 1.25; }
+.secondary { color: var(--deck-muted); font-size: 24px; }
+.source { position: absolute; left: 80px; bottom: 28px; max-width: 1380px; font-size: 18px; line-height: 1.35; color: var(--deck-muted); }
+.visual-placeholder { display: grid; place-items: center; text-align: center; height: 580px; color: var(--deck-muted); font-size: 28px; }
+.reveal .controls { color: var(--deck-cyan); right: 12px; bottom: 9px; }
+.reveal .controls button { transform: scale(.7); }
+.reveal .progress { color: var(--deck-cyan); height: 3px; }
+.reveal .slide-number { color: var(--deck-muted); background: transparent; font-size: 14px; left: 16px; right: auto; bottom: 10px; }
+#speaker-notes { width: min(900px, 86%); max-height: 84%; padding: 28px 35px; border: 1px solid #537084; border-radius: 12px; background: #112230; color: var(--deck-text); font: 18px/1.6 Arial, sans-serif; }
+#speaker-notes::backdrop { background: #0009; }
+#speaker-notes h3 { margin-top: 0; }
+#close-notes { float: right; border: 0; background: transparent; color: inherit; font-size: 28px; cursor: pointer; }
+@media (prefers-reduced-motion: reduce) { .reveal * { scroll-behavior: auto; } }
