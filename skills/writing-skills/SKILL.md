@@ -37,6 +37,10 @@ A reusable reference for a proven technique, pattern, or tool — NOT a narrativ
 
 **Frontmatter:** `name` (letters/numbers/hyphens only) and `description` required; ≤1024 chars total; see [agentskills.io/specification](https://agentskills.io/specification).
 
+## Personal skills (mitya-skills)
+
+Mitya's personal workflows live in `~/.agents/mitya-skills/skills/`, with an entry in its README reference. **Before writing or editing one, propose a numbered list of the points you'll add or change, and wait for his confirmation.** His notes are input to that list, not approval of it. After confirmation, run the full cycle below — never skip the baseline.
+
 ## Invocation: the two costs
 
 Choosing how a skill is invoked is choosing which cost you pay.
