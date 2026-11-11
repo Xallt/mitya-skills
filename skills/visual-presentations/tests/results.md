@@ -128,3 +128,17 @@ round or generated art was introduced.
 Run `python3 -m unittest discover -s tests` from the skill directory. For browser
 regression, run `node /path/to/visual-presentations/tests/test_starter.mjs` from a
 directory with Playwright installed; optionally set CHROME_PATH to local Chrome.
+
+## Round 2 — feedback from a research-sync deck (Nov 2026)
+
+Baseline used the previous SKILL.md; green used the edited one. Fresh agents,
+inherited model, one run each.
+
+| Scenario | Baseline | Green |
+|--|--|--|
+| D | Fail: title and objective slides text only; "Current status" and "Frozen assumptions" as title-only slides; span only defined in words; panel link only in notes; window not visible | Pass: review.png on the title, diagram on the objective, kickers instead of headers, muted count/unit/window lines, linked source, Oct 6 and Oct 22 markers only, one design idea offered |
+| E | Fail: loop slide "fully static … motion would explain nothing more"; no design ideas. Passed: picked img07 with a not-typical note | Pass: pipeline first, one click adds the return arrow; three design ideas offered unapplied; img07 kept |
+| F | Fail: would replace img03 with "an edge near the median gain"; passed the plan slide (task on a real eval image) | Pass: picks an edge whose change is plainly visible |
+| G | Fail: no event markers, no source link on the slide | Pass: looks up rollout steps and instruction changes, marks only relevant ones, links the panel |
+
+The plan-slide purpose point passed baseline in both D and F, so it was not added.
