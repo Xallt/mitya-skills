@@ -18,6 +18,16 @@ enterprise layering. Apply these defaults unless a project says otherwise.
 - No shallow abstractions, vague `util`/`helper` grab-bags, mega-services, or repository-per-table.
 - Don't add a layer until duplication or a real seam demands it.
 
+## Reuse before writing
+- Before writing new code, find the code that already owns that concept and use it.
+  Re-declaring an existing type or copying a function is a defect, in research
+  scripts too.
+- Aim for the fewest lines of code, reached by better structure and sharing,
+  never by compressing code, bending formatting, or dropping checks.
+- Share one concept, not similar-looking code. Don't split domain-specific
+  functions into pieces just so other code can reuse them.
+- Starting with a refactor that makes reuse possible is welcome.
+
 ## Debuggability first
 - Structured errors, typed failure modes, safe telemetry and tracing. Never log secrets or PII.
 
