@@ -142,3 +142,14 @@ inherited model, one run each.
 | G | Fail: no event markers, no source link on the slide | Pass: looks up rollout steps and instruction changes, marks only relevant ones, links the panel |
 
 The plan-slide purpose point passed baseline in both D and F, so it was not added.
+
+## Round 3 — section breaks, refresh, estimate charts (Nov 2026)
+
+| Scenario | Baseline | Green |
+|--|--|--|
+| H | Fail: "no section-header slides", kickers only; range bars on the estimate; static slide, a click build only offered as an idea. Passed: measured vs modeled styled apart, source line | Pass: break slides with 🧊 / ❓ / rising line / 🎯; one midpoint per bar, ranges in notes; click adds a bar and swaps the explanation |
+| I | Fail: noted stale charts and examples, offered a refresh, didn't do it. Passed: ran the selector on 00018, full pipeline captions, kept the other scan off the slide | Pass: re-pulls data, re-renders with a release marker, re-picks examples, tells Mitya; same-image run kept |
+
+Like-for-like comparison passed baseline, so it was not added. The starter gained a
+break-slide example and a contents panel beside the overview, covered by
+tests/test_starter.mjs.

@@ -21,9 +21,32 @@ try {
   result=run('node',[join(root,'scripts/check_deck.mjs'),join(good,'presentation.html')]);
   assert.equal(result.status,0,result.stdout+result.stderr);
   const report=JSON.parse(await readFile(join(good,'checks/report.json'),'utf8'));
-  assert.equal(report.count,2);assert.equal(report.errors.length,0);
+  assert.equal(report.count,3);assert.equal(report.errors.length,0);
   assert.equal(report.navigation,true);assert.equal(report.notesOpen,true);
   assert.ok(report.viewports.every(v=>v.fit));
+  {
+    const browser=await chromium.launch({headless:true,...(process.env.CHROME_PATH?{executablePath:process.env.CHROME_PATH}:{})});
+    try {
+      const page=await browser.newPage({viewport:{width:1600,height:900}});
+      await page.goto(pathToFileURL(join(good,'presentation.html')).href);
+      await page.waitForFunction(()=>window.deck?.isReady());
+      await page.evaluate(()=>deck.slide(2,0,-1));
+      await page.keyboard.press('Escape');
+      await page.waitForFunction(()=>deck.isOverview()&&!document.getElementById('toc').hidden);
+      const heads=await page.locator('#toc-list a.toc-head').count();
+      assert.equal(heads,2,'contents: title + one section');
+      await page.locator('#toc-list a.toc-head').first().click();
+      await page.waitForFunction(()=>!deck.isOverview()&&deck.getIndices().h===0&&document.getElementById('toc').hidden);
+      assert.equal(await page.evaluate(()=>document.documentElement.dataset.theme),'dark');
+      assert.ok(await page.evaluate(()=>document.fonts.check('900 80px "Schibsted Grotesk"')),'vendored display font loads offline');
+      await page.keyboard.press('Escape');
+      await page.locator('#theme-switch button[data-theme="light"]').click();
+      assert.equal(await page.evaluate(()=>getComputedStyle(document.body).backgroundColor),'rgb(238, 237, 232)','light palette applies');
+      await page.reload();
+      await page.waitForFunction(()=>window.deck?.isReady());
+      assert.equal(await page.evaluate(()=>document.documentElement.dataset.theme),'light','theme choice persists');
+    } finally {await browser.close();}
+  }
   result=run('python3',[join(root,'scripts/bundle.py'),index,'--out',join(good,'preview.html'),'--inline-preview']);
   assert.equal(result.status,0,result.stderr);
   const browser=await chromium.launch({headless:true,...(process.env.CHROME_PATH?{executablePath:process.env.CHROME_PATH}:{})});
@@ -45,5 +68,5 @@ try {
   assert.ok(failure.errors.some(e=>e.includes('trailing periods')));
   assert.ok(failure.errors.some(e=>e.includes('broken images')));
   assert.ok(failure.errors.some(e=>e.includes('1920×900')));
-  console.log('PASS: offline starter, navigation, notes, four viewports, inline sizing, and deliberate punctuation/image/overflow failures');
+  console.log('PASS: offline starter, navigation, notes, overview contents, theme switch, four viewports, inline sizing, and deliberate punctuation/image/overflow failures');
 } finally {await rm(temp,{recursive:true,force:true});}

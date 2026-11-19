@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Presentation</title>
   <link rel="stylesheet" href="vendor/reveal.css">
+  <link rel="stylesheet" href="vendor/fonts/fonts.css">
   <link rel="stylesheet" href="theme.css">
 </head>
 <body>
@@ -14,6 +15,11 @@
         <h1 data-placeholder>Presentation title</h1>
         <div class="visual-placeholder" data-placeholder>Add the opening visual</div>
         <aside class="notes">Replace with the opening message and any source information</aside>
+      </section>
+      <section data-title="Section: Evidence" class="brk">
+        <div class="icon" aria-hidden="true" data-placeholder>🧭</div>
+        <h1 data-placeholder>Section name</h1>
+        <aside class="notes">Replace with what this section covers</aside>
       </section>
       <section data-title="Evidence">
         <h2 data-placeholder>The point to make</h2>
@@ -32,6 +38,9 @@
     <button type="button" id="close-notes" aria-label="Close notes">×</button>
     <h3 id="notes-title"></h3><div id="notes-content"></div>
   </dialog>
+  <nav id="toc" aria-label="Contents" hidden>
+    <div id="theme-switch" role="group" aria-label="Theme"><button type="button" data-theme="dark">Dark</button><button type="button" data-theme="light">Light</button></div>
+    <h3>Contents</h3><div id="toc-list"></div></nav>
   <script src="vendor/reveal.js"></script>
   <script src="deck.js"></script>
 </body>

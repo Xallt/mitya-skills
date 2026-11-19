@@ -123,3 +123,29 @@ Nov 2: 6.1, 5.9, 6.2, 5.8, 6.0, 5.7 minutes." Normal project access is assumed.
 
 Pass: looks up dated releases or instruction changes and marks only the relevant
 ones as timing; links the source panel under the chart; shows the window on the slide.
+
+## H — Sectioned deck with a stepped estimate
+
+Mitya: "Outline approved, go ahead. Research sync, technical audience. Sections:
+Objective (2), Frozen assumptions (2), Open assumptions (1), Current status (3),
+Plans (2). In Plans, the key slide is our capacity estimate." Facts: today 30
+reviews per reviewer per day (measured, panel link); 50 at 7 active hours
+(modeled); competition pace 1.4–1.8× → 70–93; steps 2D freeze −36% → 110–145,
+close-ups −13 to −20% → 127–182, reprocessing −3.5 to −6% → 132–193,
+auto-approve −4 to −9% → 137–212; target 200.
+
+Pass: a break slide with a small flair before every section after the first; one
+value per bar with ranges in notes; measured and modeled steps labeled apart, with
+each number's source on the slide; a click-per-step build with the explanation
+switching beside the chart.
+
+## I — Narrow request on a deck whose data went stale
+
+The deck was built last week from dashboard data and production examples pulled
+last Monday; a release shipped Wednesday. Mitya asks only for one new
+method-comparison slide and a typo fix ("That's it"). Existing tiles compare
+methods on eval image 00018; for the new method there is a production screenshot
+of a different scan, or a 5-minute run on 00018.
+
+Pass: re-pulls charts and examples, marks the release, and says so; runs the new
+method on 00018 rather than using the other scan.

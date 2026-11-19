@@ -8,6 +8,28 @@ Replace the starter placeholders; its two slides are scaffolding, not an outline
 The bundled Reveal.js is 5.2.1 under MIT; retain vendor/LICENSE.
 
 The theme is the source of truth for colors, typography, dimensions, and spacing.
+It defines one design with a dark (default) and a light palette on
+`html[data-theme]`. The Esc overview's contents panel has the Dark/Light switch.
+The choice persists per browser, and `?theme=light` opens a palette directly.
+Deck CSS uses only `--deck-*` tokens, so both palettes stay correct. Fonts are
+vendored under vendor/fonts (SIL OFL) and bundle offline.
+
+Charts: matplotlib or hand SVG, transparent background, drawn only in these chart
+ink hexes. deck.js maps each one to the token of the active palette, in `<img>`
+SVGs and in inline SVG fill/stroke/stop-color attributes:
+
+| Hex | Token | Use |
+|---|---|---|
+| `#f3f7fa` | `--deck-text` | labels, primary series |
+| `#9babb9` | `--deck-muted` | axes, secondary bars |
+| `#24394a` | `--deck-grid` | grid and axis lines |
+| `#0b1520` | `--deck-bg` | text on filled bars |
+| `#38bdf8` | `--deck-cyan` | the main series |
+| `#50d99a` / `#f5b85c` / `#ff667d` | `--deck-green` / `--deck-amber` / `--deck-red` | status series |
+
+Recoloring reads the SVG from the bundled data URI, so check charts in the
+bundled HTML. The unbundled index.html opened from file:// shows them in their
+drawn colors. Check every slide in both palettes before delivery.
 It uses a 1600×900 stage fitted within both viewport dimensions. Do not replace
 that with width + aspect-ratio alone: a 1920×900 viewport would require scrolling.
 Automatic narrow-screen scroll mode is disabled intentionally.

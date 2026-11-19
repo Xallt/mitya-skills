@@ -48,7 +48,18 @@ Search the data for the example where the effect is plainly visible, not the
 median or first candidate. If before and after look alike, it is the wrong
 example. Say in notes that it was picked and what is typical.
 
-Under a chart of live data, link its source panel. On a time-based chart, mark
+On an estimate chart, show one value per bar, the average, and keep ranges in
+notes. Keep measured and modeled values as separate, labeled steps, and make it
+clear on the slide where each number comes from.
+
+Data goes stale between rounds. At the start of each round, re-pull data-driven
+charts and examples from the latest data and mark new releases, even when the
+request is narrow. Keep the pulls and chart code in the deck's scripts/ and
+data/ folders so a refresh is a rerun.
+
+Draw charts as transparent SVG in the chart ink hexes listed in
+[delivery.md](references/delivery.md); the deck recolors them for the active
+palette. Under a chart of live data, link its source panel. On a time-based chart, mark
 the dated events that plausibly moved that metric, such as releases or changed
 instructions: they make the changes interpretable. Look them up even when none
 were supplied, leave unrelated events off, and present markers as timing, not
@@ -61,9 +72,14 @@ evidence.**
 
 ## 3. Edit the composition
 
-Use the bundled theme: dark navy, near-white text, cyan emphasis, muted secondary
-labels, large type, and generous spacing. Favor one clear composition with
-prominent evidence over card grids, gradients, and decorative framing. Approval
+Use the bundled theme. One design ships in two palettes, switched in the Esc
+menu: graphite dark (cyan data, amber numbers) and warm light paper (cobalt).
+It uses heavy Schibsted Grotesk headings, IBM Plex Mono for small labels, and a faint
+dot field. Its components are an underlined mono `.kicker` above each title,
+`.fig` crop marks around evidence, outlined `.card` surfaces on a tinted offset
+shadow, and `.list` items numbered "1.". Color only through the `--deck-*`
+tokens, never fixed hex, so both palettes work. Favor one clear composition
+with prominent evidence over card grids, gradients, and decorative framing. Approval
 of content does not approve an inherited generic design. For new decks, copy
 [the starter](templates/starter/index.html); for existing decks, preserve approved
 work and change only what is requested.
@@ -75,8 +91,10 @@ help. Do not trade useful evidence for vague slogans. Move explanation to notes.
 Match detail to the audience; not every deck is a nontechnical business
 presentation.
 
-No section-header slides. Announce a section with a kicker on its first content
-slide.
+Open every section after the first with a break slide: a fitting emoji on the
+theme's tilted icon card, the section name, and a "Section N" kicker, or a muted
+background graphic like a rising line for progress. Keep breaks on the plain
+slide background. The first section starts right after the title.
 
 No trailing periods in titles or one-line slide text. Avoid filler, generic AI
 phrasing, and unnecessary technical detail.
@@ -96,7 +114,8 @@ behavior. Keep the same live element through highlighting and zooming; preserve
 its state across steps. Give the presenter deliberate control of progression.
 A reveal is warranted when the added step is the slide's point, such as a
 loop-back arrow that turns a pipeline into a cycle: show the pipeline, then add
-that step on a click.
+that step on a click. For an estimate built in steps, a slide where each click
+adds one step and swaps its explanation beside the chart is welcome.
 
 When motion is needed, read [motion.md](references/motion.md). Otherwise omit it.
 **Done: every animation has a specific communication purpose.**
