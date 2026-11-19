@@ -36,7 +36,8 @@ Write, per group, what each possible answer would tell you. If no answer would c
 
 - **Keys for everything.** Each verdict, note (⌘↵ submits), next/prev, next-unlabeled, and every viewer control (zoom-to-sample, full view, reset, switch sub-view). Show the key on each button.
 - **Notes are data.** A note can be submitted without a verdict. Read every one.
-- **Hide priors until submitted.** Existing labels, model scores, and why you picked the sample stay hidden while judging, then appear after submission.
+- **Finishing a sample advances.** The action that finishes a sample saves it and moves to the next open one, with no second keypress for "next". When classifying, that action is any verdict key or click. When editing, it is an explicit Submit button with its own key. A note typed first is saved with it; a note submitted alone also finishes the sample.
+- **Hide priors while judging.** Existing labels, model scores, and why you picked the sample show only on samples already answered, when the user steps back to one.
 - **Agent strip.** Your latest message, a history toggle, a busy indicator while you analyze. The page polls the queue every few seconds and jumps to new samples when the current one is done.
 - **Judge-grade views.** Show the sample the way the user judges it in their real tool — same viewer controls, every relevant view (e.g. raw + context + overlay), zoomable to the decisive detail. Reuse the product's viewer conventions.
 
@@ -53,6 +54,7 @@ Disk is the shared state — browser storage is invisible to you.
 
 - **Never reorder or remove queue entries while the page is open** — the page labels by position and saves verdicts onto the wrong sample.
 - **The watcher counts labels unseen by you**, not labels since its own last trigger, or it fires early.
+- **Servers must outlive your session.** Start each one (page server, any model service) as a systemd user service: `systemd-run --user --unit=<name> --working-directory=<dir> -p Restart=on-failure <python> server.py <port>`. Never `nohup`, `&`, or `setsid` — those stay in the agent's process scope, which is killed on session restart.
 - Background commands time out (~2 h). If the watcher dies idle, tell the user how to resume rather than silently stopping.
 
 ## Reporting numbers
