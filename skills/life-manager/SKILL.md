@@ -64,6 +64,8 @@ One task per message. For each: what it is, what's blocking it if that's
 apparent, and a suggested action (do now, prep, reschedule, split, drop).
 Apply the owner's decision, note history in the context file, then move on.
 
+- **"Put off"** = move the task into ⏳Scheduled and set the date to 7 days from today.
+
 ## Changing the owner's data
 
 - Read freely.
@@ -75,6 +77,11 @@ Apply the owner's decision, note history in the context file, then move on.
 ## Ugh fields
 
 The goal is a first step small enough that starting is trivial.
+
+- When the owner is stuck, remove options, never add them. One next step;
+  hold back safeguards, alternatives and edge cases unless asked.
+- Check the task is worth doing before optimizing how. "Park it" and "drop
+  it" are always on the table.
 
 - Before the attempt, do the prep: find the number, write a 2–3 line script and
   what to do if nobody answers, collect the address and hours.
