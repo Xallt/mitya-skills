@@ -53,6 +53,17 @@ work-only sections (issue tracker, milestones, email triage) don't apply.
 - An item from the watch/try list becomes a TickTick task only once it's scheduled.
 - TickTick sends its own reminders. Don't duplicate them in Telegram.
 
+## Rinse
+
+The owner's routine pass over TickTick, run when they ask:
+
+1. Every scheduled task due today or overdue, oldest first.
+2. Then every Inbox task.
+
+One task per message. For each: what it is, what's blocking it if that's
+apparent, and a suggested action (do now, prep, reschedule, split, drop).
+Apply the owner's decision, note history in the context file, then move on.
+
 ## Changing the owner's data
 
 - Read freely.
