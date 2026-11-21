@@ -31,11 +31,7 @@ Some of these are opinionated (especially around PRs / Linear / worktrees), some
 The pattern I use now:
 
 - [`grill-me`](./skills/grill-me/SKILL.md) for narrowing down a feature
-- For medium to large features, use
-  [`incremental-implementation`](./skills/incremental-implementation/SKILL.md),
-  [`subagent-driven-development`](./skills/subagent-driven-development/SKILL.md),
-  and sometimes
-  [`test-driven-development`](./skills/test-driven-development/SKILL.md).
+- [`test-driven-development`](./skills/test-driven-development/SKILL.md) when I ask for TDD
 - [`pr`](./skills/pr/SKILL.md) for my instructions on creating a PR & linking to a Linear issue
 - [`finalize-feature`](./skills/finalize-feature/SKILL.md) any time code in the branch is ready for pushing & needs refinement (run checks / create PR if lacking, check PR comments)
 
@@ -53,32 +49,23 @@ repo-specific adaptation.
 - **[`grill-me`](./skills/grill-me/SKILL.md)** - Interview the user relentlessly
   about a plan or design until the important decisions are resolved. Adapted from
   [`mattpocock/skills`](https://github.com/mattpocock/skills/blob/main/skills/productivity/grill-me/SKILL.md).
-- **[`plan-required-skills`](./skills/plan-required-skills/SKILL.md)** - Keep
-  implementation plans honest about TDD, incremental work, subagents, reviews,
-  and named execution practices. Personal.
 
 ### Building And Debugging
 
-- **[`incremental-implementation`](./skills/incremental-implementation/SKILL.md)** -
-  Deliver multi-file changes in small, verified slices. Adapted from
-  [`addyosmani/agent-skills`](https://github.com/addyosmani/agent-skills/blob/main/skills/incremental-implementation/SKILL.md).
-- **[`subagent-driven-development`](./skills/subagent-driven-development/SKILL.md)** -
-  Execute implementation plans by dispatching isolated subagents for independent
-  tasks. Adapted from
-  [`obra/superpowers`](https://github.com/obra/superpowers/blob/main/skills/subagent-driven-development/SKILL.md).
 - **[`test-driven-development`](./skills/test-driven-development/SKILL.md)** -
   Use a red-green-refactor loop when implementing features or bug fixes. Adapted
   from
   [`obra/superpowers`](https://github.com/obra/superpowers/blob/main/skills/test-driven-development/SKILL.md).
-- **[`improve-codebase-architecture`](./skills/improve-codebase-architecture/SKILL.md)** -
-  Find deeper refactoring opportunities in a codebase. Adapted from
-  [`mattpocock/skills`](https://github.com/mattpocock/skills/blob/main/skills/engineering/improve-codebase-architecture/SKILL.md).
+- **[`vercel-react-best-practices`](./skills/vercel-react-best-practices/SKILL.md)** -
+  Apply Vercel Engineering's React and Next.js performance guidance.
 
 ### Review And Shipping
 
 - **[`finalize-feature`](./skills/finalize-feature/SKILL.md)** - Prepare a
   branch for review: triage existing PR feedback, run checks, commit, push, and
   open or update a PR. Personal.
+- **[`finalize-in-sep-worktree`](./skills/finalize-in-sep-worktree/SKILL.md)** -
+  Run feature finalization in a separate worktree and clean it up afterward. Personal.
 - **[`pr`](./skills/pr/SKILL.md)** - Create or reconcile a branch, PR, and
   Linear issue so they describe the full branch scope. Personal.
 - **[`splitting-prs`](./skills/splitting-prs/SKILL.md)** - Split one oversized
@@ -89,6 +76,15 @@ repo-specific adaptation.
 - **[`handoff`](./skills/handoff/SKILL.md)** - Compact the current conversation
   into a handoff document for another agent. Adapted from
   [`mattpocock/skills`](https://github.com/mattpocock/skills/blob/main/skills/productivity/handoff/SKILL.md).
+
+### Task And Session Management
+
+- **[`life-manager`](./skills/life-manager/SKILL.md)** - Review personal tasks,
+  plan errands, and schedule them around existing commitments. Personal.
+- **[`session-manager`](./skills/session-manager/SKILL.md)** - Delegate work to
+  agent sessions, track progress, and surface decisions. Personal.
+- **[`telegram-notify`](./skills/telegram-notify/SKILL.md)** - Send requested
+  notifications through the configured Telegram bot. Personal.
 
 ### Presentations
 
