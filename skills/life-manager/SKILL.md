@@ -49,6 +49,7 @@ work-only sections (issue tracker, milestones, email triage) don't apply.
 | The owner's own notes, incl. the watch/try list | Obsidian vault — **read-only for agents** |
 | Getting the owner's attention when they aren't in a session | Telegram |
 
+- The Google connectors (Calendar, Gmail) are the **work** account; it sees the personal calendar as free/busy only. Pass `calendarId` explicitly; the default is the work calendar.
 - Write task titles in the language the owner used (often Russian).
 - An item from the watch/try list becomes a TickTick task only once it's scheduled.
 - TickTick sends its own reminders. Don't duplicate them in Telegram.
@@ -64,6 +65,7 @@ One task per message. For each: what it is, what's blocking it if that's
 apparent, and a suggested action (do now, prep, reschedule, split, drop).
 Apply the owner's decision, note history in the context file, then move on.
 
+- **«Сделать miscellaneous таску»** (weekly) = do one task from the vault's `Miscellaneous.md` list. Offer a fitting pick from it.
 - **"Put off"** = move the task into ⏳Scheduled and set the date to 7 days from today.
 
 ## Changing the owner's data
