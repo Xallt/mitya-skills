@@ -1,0 +1,62 @@
+:root{--bg:#f6f6f4;--fg:#1d1d1b;--mut:#6b6b66;--card:#fff;--line:#deded8;--acc:#2563eb;--ok:#15803d;--warn:#a16207;--bad:#b91c1c}
+@media (prefers-color-scheme:dark){:root{--bg:#161615;--fg:#ececea;--mut:#9a9a94;--card:#202020;--line:#343432;--acc:#60a5fa;--ok:#4ade80;--warn:#facc15;--bad:#f87171}}
+*{box-sizing:border-box}
+html,body{height:100%}
+/* one screen: the page never scrolls; long text scrolls inside its own box */
+body{margin:0;background:var(--bg);color:var(--fg);font:13px/1.4 system-ui,sans-serif;
+ height:100vh;height:100dvh;overflow:hidden;display:grid;grid-template-rows:auto minmax(0,1fr)}
+header{background:var(--card);border-bottom:1px solid var(--line);padding:5px 12px;display:flex;gap:10px;align-items:center;white-space:nowrap;overflow:hidden}
+header h1{font-size:14px;margin:0}
+header .sp{flex:1}
+.mut{color:var(--mut)}
+.pill{border:1px solid var(--line);border-radius:999px;padding:1px 8px;font-size:12px}
+.pill.ok{color:var(--ok)}.pill.warn{color:var(--warn);border-color:var(--warn)}.pill.bad{color:#fff;background:var(--bad);border-color:var(--bad)}
+.lg{font-size:12px;color:var(--mut);overflow:hidden;text-overflow:ellipsis}
+.lg i{display:inline-block;width:14px;height:3px;vertical-align:middle;margin:0 3px 0 8px}
+#lk-helpB{padding:1px 10px;border-radius:999px;font-weight:700;text-align:center}
+main{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:10px;padding:8px 10px;min-height:0}
+/* item area: projects arrange figures in .col / .row containers; every figure shrinks to fit */
+.views{display:flex;gap:8px;min-height:0;min-width:0}
+.col{display:flex;flex-direction:column;gap:8px;min-height:0;min-width:0;flex:1 1 0}
+.row{display:flex;flex-direction:row;gap:8px;min-height:0;min-width:0;flex:1 1 0}
+figure{margin:0;flex:1 1 0;min-height:0;min-width:0;display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:4px}
+figcaption{display:flex;gap:6px;align-items:center;font-size:11px;color:var(--mut);margin-top:2px}
+figcaption span{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+figcaption button{padding:0 6px;font-size:12px;line-height:16px}
+/* viewer: photo + vector overlay drawn on one canvas at screen resolution */
+.lk-zv{flex:1 1 0;min-height:0;overflow:hidden;position:relative;cursor:grab;touch-action:none;background:#111;border-radius:4px}
+.lk-zv.drag{cursor:grabbing}
+.lk-zv canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.lk-zv .zb{position:absolute;right:4px;top:4px;font-size:11px;background:rgba(0,0,0,.65);color:#fff;border-radius:4px;padding:1px 5px;pointer-events:none}
+.lk-zv .lk-msg{position:absolute;left:6px;bottom:4px;font-size:11px;color:#ddd;pointer-events:none}
+/* side panel: question and verdicts first, then note, reveal, agent strip */
+.panel{display:flex;flex-direction:column;gap:7px;min-height:0;overflow:hidden}
+.q{font-size:14px;font-weight:600;margin:0}
+#lk-meta{font-size:12px}
+.verdicts{display:flex;flex-direction:column;gap:5px}
+.nav{display:flex;gap:5px}.nav button{flex:1;padding:5px 4px;font-size:12px}
+button{font:inherit;padding:7px 10px;border-radius:7px;border:1px solid var(--line);background:var(--card);color:var(--fg);cursor:pointer;text-align:left}
+button.chosen{outline:2px solid var(--acc)}
+button kbd{font-size:11px;color:var(--mut);float:right}
+.nav button kbd{float:none;margin-left:4px}
+textarea{width:100%;height:52px;flex:none;resize:none;font:inherit;background:var(--card);color:var(--fg);border:1px solid var(--line);border-radius:7px;padding:5px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:6px 8px;font-size:12px;overflow:auto;min-height:0}
+#lk-reveal{border-style:dashed;flex:0 1 auto;max-height:22%}
+#lk-agent{flex:1 1 0;min-height:3.2em;white-space:pre-wrap}
+.keys{font-size:11px;color:var(--mut);flex:none}
+.busy::after{content:" ⏳"}
+a{color:var(--acc)}
+.overlay{position:fixed;inset:0;display:none;z-index:10}
+.overlay.on{display:flex}
+#lk-full{background:rgba(0,0,0,.92);padding:30px 8px 8px}
+#lk-full .lk-zv{height:100%}
+#lk-full .hint{position:absolute;top:7px;left:12px;color:#bbb;font-size:12px}
+#lk-full .lk-close{position:absolute;top:3px;right:8px;padding:2px 8px;background:#222;color:#eee;border-color:#555}
+#lk-help{background:rgba(0,0,0,.5);align-items:center;justify-content:center;z-index:20}
+#lk-help .card{background:var(--card);color:var(--fg);border-radius:10px;padding:12px 18px;max-width:min(680px,94vw);max-height:92vh;overflow:auto;box-shadow:0 10px 40px rgba(0,0,0,.35)}
+#lk-help h2{font-size:15px;margin:2px 0 6px}#lk-help h3{font-size:12px;margin:10px 0 3px;color:var(--mut);text-transform:uppercase;letter-spacing:.04em}
+#lk-help table{border-collapse:collapse}#lk-help td{padding:2px 14px 2px 0;vertical-align:top}
+#lk-help kbd{display:inline-block;min-width:20px;text-align:center;border:1px solid var(--line);border-bottom-width:2px;border-radius:4px;padding:0 5px;font:12px ui-monospace,monospace}
+/* phones only: no room for a one-screen layout, fall back to a scrolling column */
+@media (max-width:760px){body{height:auto;overflow:auto;display:block}main{display:block}.views,.row{flex-direction:column}
+ .lk-zv{flex:none;height:60vh}.panel{margin-top:8px}#lk-agent{flex:none;max-height:30vh}}

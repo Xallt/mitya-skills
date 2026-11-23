@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Labeling</title>
+<link rel="stylesheet" href="kit/labelkit.css">
+</head><body>
+<header>
+ <h1 id="lk-title">Labeling</h1><span id="lk-pos" class="pill"></span><span id="lk-done" class="pill"></span>
+ <span id="lk-save" class="pill" title="Saves go through a queue in this browser and retry until the server has them"></span>
+ <span id="lk-legend" class="lg"></span><span class="sp"></span>
+ <button id="lk-helpB" title="Keyboard shortcuts (?)">?</button>
+</header>
+<main>
+ <div id="lk-views" class="views"></div>
+ <div class="panel">
+  <div id="lk-q" class="q"></div>
+  <div id="lk-meta" class="mut"></div>
+  <div id="lk-verdicts" class="verdicts"></div>
+  <div class="nav"><button id="lk-prev">← prev</button><button id="lk-next">next →</button><button id="lk-unl">unlabeled<kbd>u</kbd></button></div>
+  <textarea id="lk-note" placeholder="Note (n) · ⌘↵ saves the note alone and moves on"></textarea>
+  <div id="lk-reveal" class="box" hidden></div>
+  <div id="lk-agent" class="box"></div>
+  <div class="keys">Press <b>?</b> for every shortcut · wheel/pinch zoom · drag pan</div>
+ </div>
+</main>
+<div id="lk-full" class="overlay"></div>
+<div id="lk-help" class="overlay" data-lk-help></div>
+<script src="kit/labelkit.js"></script>
+<script src="page.js"></script>
+</body></html>
