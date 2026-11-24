@@ -46,7 +46,7 @@ work-only sections (issue tracker, milestones, email triage) don't apply.
 |---|---|
 | Anything actionable, with dates and reminders | TickTick |
 | Time commitments | Google Calendar (personal) |
-| The owner's own notes, incl. the watch/try list | Obsidian vault — **read-only for agents** |
+| The owner's own notes, incl. the watch/try list | Obsidian vault |
 | Getting the owner's attention when they aren't in a session | Telegram |
 
 - The Google connectors (Calendar, Gmail) are the **work** account; it sees the personal calendar as free/busy only. Pass `calendarId` explicitly; the default is the work calendar.
@@ -71,6 +71,7 @@ Apply the owner's decision, note history in the context file, then move on.
 ## Changing the owner's data
 
 - Read freely.
+- Edit the Obsidian vault only when the owner explicitly asks. This includes transferring tasks between TickTick and Obsidian and editing their contents. Verify the destination before removing the source.
 - Create or reschedule TickTick tasks and calendar entries when the owner asked,
   or after they approve a plan you proposed. Say what you changed in one line.
 - Never complete or delete a task, and never invite or message other people,
