@@ -154,6 +154,7 @@ Skills enforcing discipline (TDD, verification-before-completion) must resist ra
 ## Anti-patterns
 
 - **Narrative** ("In session 2025-10-03 we found…") — not reusable.
+- **Example-shaped rules**: a correction from one task, written up as a rule ("gears 4× slower", "pops finish in 0.3 s", "put an image on the title slide"). For each correction, ask what the user wants in general, and whether they would say it again on a different task. Write that preference without the task's numbers or objects. Drop corrections that fit only this one artifact. An example may illustrate a principle, but never replaces it.
 - **Multi-language dilution** (example.js + .py + .go) — one excellent example beats many mediocre; you can port.
 - **Code in flowcharts** / **generic labels** (step1, helper2) — labels must carry meaning.
 - Flowcharts only for non-obvious decisions or premature-stop loops — never for reference (tables), linear steps (numbered lists), or code (markdown blocks). See `graphviz-conventions.dot`; render with `render-graphs.js`.
