@@ -5,6 +5,9 @@
 Copy the whole `templates/starter/` directory into the task's artifact directory.
 Keep the editable index.html, theme.css, deck.js, vendor files, and local assets.
 Replace the starter placeholders; its two slides are scaffolding, not an outline.
+Fill the Esc panel's edit box with the absolute paths of index.html and build.sh,
+so the user can edit the source and rebuild without asking. Set build.sh's OUT
+to the portable file name, and add data refresh steps to it if the deck has them.
 The bundled Reveal.js is 5.2.1 under MIT; retain vendor/LICENSE.
 
 The theme is the source of truth for colors, typography, dimensions, and spacing.

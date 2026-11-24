@@ -153,3 +153,19 @@ The plan-slide purpose point passed baseline in both D and F, so it was not adde
 Like-for-like comparison passed baseline, so it was not added. The starter gained a
 break-slide example and a contents panel beside the overview, covered by
 tests/test_starter.mjs.
+
+## Round: post-talk feedback (Nov 2026), scenario J
+
+Changes: start minimal; the user's words kept verbatim; edits scoped to what they
+name; text slides allowed; sharp evidence; sketches set layout not styling;
+centered content; quick entrances. Removed: visual-on-every-slide, title-slide
+image, per-round design ideas, time-chart event markers (scenario G dropped).
+
+RED (previous SKILL.md): rewrote the user's punctuation (`-` → `—`, `->` → `→`),
+added an unrequested "Misc" kicker, and offered a visual for the text slide
+because "the skill says every slide should have one". Centering and pop timing
+(~0.4 s) were already fine.
+
+GREEN (edited SKILL.md): four points character-for-character, no added kicker
+or subtext, no visual offered, content centered, bold Agent memory line in
+place with nothing else changed, pops land by 0.36 s.

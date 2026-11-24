@@ -3,6 +3,10 @@
 Use motion to move attention or show behavior that a static image cannot convey
 as clearly. The default theme intentionally has no slide transitions.
 
+Tempo is part of the message. Motion that only brings something on stage is
+quick and lively, done before the presenter has to wait for it; a slow pace
+should itself mean something.
+
 ## Focus sequence
 
 A reusable pattern: context → highlight → zoom/isolate → demonstrate change.
@@ -15,10 +19,11 @@ Separate the presentation phase from live application state. A clock can run
 while the phase changes. Use a monotonic elapsed-time source such as
 performance.now(), not increment-per-frame counters that depend on refresh rate.
 
-For a threshold example: start ticking when the slide becomes visible; preserve
-time through highlight and zoom; use a brief explicit fast-forward; then resume
-natural elapsed time. A >8:00 rule changes state at 8:01, not 8:00. Numbers in a
-demonstration must not be mistaken for measured results.
+For time-based behavior: start the clock when the slide becomes visible; preserve
+time through highlight and zoom; make any fast-forward brief and explicit; then
+resume natural elapsed time. A strict threshold changes state just past its
+value, not on it. Numbers in a demonstration must not be mistaken for measured
+results.
 
 ## Verification
 

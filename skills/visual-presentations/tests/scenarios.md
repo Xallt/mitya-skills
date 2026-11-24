@@ -9,7 +9,7 @@ Keep outputs in the test record; do not contact services or change real products
 
 ## A — Missing outline under deadline pressure
 
-Mitya: "Make me a presentation about our AI work for tomorrow. I have five
+The user: "Make me a presentation about our AI work for tomorrow. I have five
 minutes before my next call, so please get moving. Our VP expects something
 impressive and I don't want a long planning exercise. There's a folder of
 product screenshots available."
@@ -24,7 +24,7 @@ permission to invent the story. Do not ask a sprawling questionnaire.
 
 ## B — Approved outline, evidence, and ruthless editing
 
-Mitya: "Go ahead with this outline for GTM: 1) a production example, 2) the
+The user: "Go ahead with this outline for GTM: 1) a production example, 2) the
 weekly review-time chart, 3) what's next. Keep it visual and concise. We present
 in ten minutes, so I need a concrete first draft now."
 
@@ -46,7 +46,7 @@ trailing periods, meaningful concise language, audience-appropriate detail.
 
 ## C — Visual polish, motion, and delivery pressure
 
-Mitya: "The outline and content are approved. Finish the styling and delivery
+The user: "The outline and content are approved. Finish the styling and delivery
 for a short product-review deck. The reviewer-clock slide should show the actual
 review screen, run from zero, then on clicks highlight its clock, zoom in, jump
 to eight minutes, and turn red at 8:01. Other slides are a product screenshot,
@@ -54,7 +54,7 @@ a weekly chart, and a next-step workflow. Make it look impressive; the demo is
 in 15 minutes and I'm tired of polishing."
 
 Available: real product captures and source, an image-generation tool, Reveal.js,
-and code rendering. There is no new art direction from Mitya. The current draft
+and code rendering. There is no new art direction from the user. The current draft
 has display cards and a blue gradient on white, a generic stock clock image,
 entrance animations on every bullet, and CSS `.reveal { width: 100%; height: auto;
 aspect-ratio: 16/9 }`. It looks correct at 1600×900. The venue laptop is 1920×900.
@@ -69,7 +69,7 @@ portable bundled Reveal.js, navigation/animation/revisit checks. No CDN dependen
 
 ## D — Approved outline with thin, text-shaped content
 
-Mitya: "The outline is approved, go ahead. Research team audience, technical.
+The user: "The outline is approved, go ahead. Research team audience, technical.
 Keep it minimal. 1) Title: Review automation status 2) Objective: speed up
 reviews, proxy metric is the share of scans finished in quick mode 3) Section:
 Current status 4) Weekly quick-mode share chart 5) Edge refiner, the new method
@@ -86,14 +86,13 @@ review.png, refiner_before.png, refiner_after.png, span_example.png.
 
 Return each shipped slide's title, visible copy, visual, and notes.
 
-Pass: title and objective slides carry visuals; no section-header slides, sections
+Pass: no section-header slides, sections
 announced by kickers; numbers show what they count, unit, and window on the slide;
-span shown with a real example; the panel link sits under the chart; markers for
-Oct 6 and Oct 22 only, as timing not cause; supplied details kept.
+span shown with a real example; the panel link sits under the chart; supplied details kept.
 
 ## E — Picking an example and a loop slide
 
-Iterating on an approved deck. Mitya asks for a refiner example from candidates
+Iterating on an approved deck. The user asks for a refiner example from candidates
 (img03: 0.97 to 0.98, typical; img11: 0.88 to 0.93; img07: one 2,043 px edge split
 into 645/532/523 px against the reviewer's 651/533/527, 0.83 to 0.99; 155 edges,
 mean gain +0.02, 20 split) and a search-loop slide whose point is that the agent
@@ -101,8 +100,7 @@ finds flaws in the metric, sending us back to improve it. Return both slides,
 presentation behavior, and the final message for the round.
 
 Pass: img07 with notes that it was picked and what is typical; the pipeline shows
-first and one click adds the loop-back step; the message offers a few design ideas
-without applying them.
+first and one click adds the loop-back step.
 
 ## F — Weak draft example and a plan slide
 
@@ -115,18 +113,9 @@ overlap and splits, a render script, eval images with reviewer-match labels.
 Pass: replaces img03 with an edge whose change is plainly visible, not a median
 one; the plan slide states the task on a real example image, not model output.
 
-## G — Time-based chart with no events supplied
-
-Mitya: "Outline approved, go ahead with this slide for the research team: average
-review time per week since we started rolling out AI edges. Weeks of Sep 28 to
-Nov 2: 6.1, 5.9, 6.2, 5.8, 6.0, 5.7 minutes." Normal project access is assumed.
-
-Pass: looks up dated releases or instruction changes and marks only the relevant
-ones as timing; links the source panel under the chart; shows the window on the slide.
-
 ## H — Sectioned deck with a stepped estimate
 
-Mitya: "Outline approved, go ahead. Research sync, technical audience. Sections:
+The user: "Outline approved, go ahead. Research sync, technical audience. Sections:
 Objective (2), Frozen assumptions (2), Open assumptions (1), Current status (3),
 Plans (2). In Plans, the key slide is our capacity estimate." Facts: today 30
 reviews per reviewer per day (measured, panel link); 50 at 7 active hours
@@ -142,10 +131,35 @@ switching beside the chart.
 ## I — Narrow request on a deck whose data went stale
 
 The deck was built last week from dashboard data and production examples pulled
-last Monday; a release shipped Wednesday. Mitya asks only for one new
+last Monday; a release shipped Wednesday. The user asks only for one new
 method-comparison slide and a typo fix ("That's it"). Existing tiles compare
 methods on eval image 00018; for the new method there is a production screenshot
 of a different scan, or a 5-minute run on 00018.
 
-Pass: re-pulls charts and examples, marks the release, and says so; runs the new
+Pass: re-pulls charts and examples and says so; runs the new
 method on 00018 rather than using the other scan.
+
+## J — Iteration round with the user's own copy
+
+Approved deck, iterating. The user: "Add a slide before the volunteer ask, titled
+'Random things', with these points:
+- Context compaction - not scary anymore - I have chats going after ~5 compactions
+- T3 - >10 tasks at once is easy-breezy
+- Phone booth + speech-to-text for 5 minutes + Opus -> solved
+- Slop still gets through -> code still needs review
+Also on the skills-repo slide, emphasize the 'Agent memory' line. And on the
+MCPs slide, on a step, pop in the new MCPs (PostHog, Linear, Slack, Notion)
+next to the old three (Grafana, Supabase, Coralogix)."
+
+Current skills-repo slide: kicker "Skills", title "Same skills and memory on
+every machine", a two-item list: "`mitya-skills`: public skills repo" and
+"Agent memory: private repo, also installed".
+
+Return the HTML of the new slide, the edited skills-repo slide, and the MCP
+step's CSS (timings and easing).
+
+Pass: the four points keep the user's wording; no subtitle, caption, or extra
+line the user didn't give; no visual invented for the text slide; "emphasize"
+bolds the line in place without restructuring; content is centered when it
+doesn't fill the stage; the pops are quick (the group lands within about half a
+second), not slow fades.

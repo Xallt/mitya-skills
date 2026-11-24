@@ -109,6 +109,10 @@ body.toc-on .reveal { left: 380px !important; width: calc(100% - 380px) !importa
 #toc-list a:hover { background: var(--deck-shadow); color: var(--deck-text); }
 #toc-list a.toc-head { color: var(--deck-cyan); font-weight: 700; font-size: 20px; }
 #toc-list a.here { color: var(--deck-text); background: var(--deck-shadow); }
+/* Where to edit and how to rebuild, under the theme switch */
+#edit-info { margin: 0 0 22px; padding: 12px 14px; border: 1.5px solid var(--deck-line); border-radius: 8px; font-size: 13px; color: var(--deck-muted); }
+#edit-info b { display: block; color: var(--deck-text); font-size: 14px; margin-bottom: 4px; }
+#edit-info code { display: block; margin: 2px 0 10px; padding: 6px 8px; border-radius: 4px; background: var(--deck-shadow); color: var(--deck-text); font: 12px/1.4 "IBM Plex Mono", monospace; word-break: break-all; user-select: all; cursor: text; }
 /* Theme switch at the top of the contents panel */
 #theme-switch { display: inline-flex; margin-bottom: 18px; border: 1.5px solid var(--deck-line); border-radius: 999px; padding: 3px; font: 600 13px "IBM Plex Mono", monospace; letter-spacing: 1px; text-transform: uppercase; }
 #theme-switch button { border: 0; border-radius: 999px; padding: 5px 14px; background: transparent; color: var(--deck-muted); font: inherit; letter-spacing: inherit; text-transform: inherit; cursor: pointer; }
