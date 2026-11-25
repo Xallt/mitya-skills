@@ -48,9 +48,11 @@ the owner.
   retry.
 - **Shared machines:** kill only your own processes, by PID, never by pattern.
   Check GPU and RAM before heavy jobs.
-- **Reviewable results:** the owner's bottleneck is verifying work. Results go in a
-  visual report: plots, example images, sample sizes, a clear verdict, and some
-  negatives for contrast.
+- **Reviewable results:** the owner's bottleneck is verifying work. Final reports
+  follow the `reporting-results` skill: verdict first, setup and ground truth
+  restated, examples behind every number, links into the owner's own tools, and
+  next steps phrased as decisions, in an explorable Claude artifact. Name the
+  skill in the prompt.
 - **Pass rules from labels:** when "good enough" has no number the owner can
   state, build a labeling page (`active-labeling` skill) and derive the
   threshold from their labels. Never invent one.
