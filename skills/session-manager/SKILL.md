@@ -68,6 +68,11 @@ the owner.
 
 ## Monitoring
 
+- **Watch only active auto-research.** Schedule a check only while an
+  auto-research task is running, and delete it at that task's deadline. Before
+  starting or taking over one, ask the owner what the agent should do while
+  they're away, what counts as done, the deadline, what's off-limits, and when
+  to wake them.
 - Run a scheduled check over the threads you watch: answer pending questions
   within scope, arbitrate resource contention, and notice drift from the
   assigned scope or agents touching each other's work.
